@@ -158,7 +158,7 @@ class TrainValidTool(object):
                 scheduler.step()
                 mid=time.perf_counter()
                 cost=mid-start
-                tb_writer.add_scalar('train_loss',loss.item())
+                tb_writer.add_scalar('train_loss',train_loss.item())
                 print('Loss of Train Data:%.4f'%(train_loss))
                 print('Time Cost:%.4f'%(cost))
                 if valid:
